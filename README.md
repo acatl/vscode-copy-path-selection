@@ -16,10 +16,10 @@ The reference is copied to your clipboard:
 
 ## Keybinding
 
-| Platform        | Shortcut         |
-| --------------- | ---------------- |
-| Mac             | `Ctrl+Alt+Cmd+C` |
-| Windows / Linux | `Ctrl+Alt+Cmd+C` |
+| Platform        | Shortcut           |
+| --------------- | ------------------ |
+| Mac             | `Ctrl+Alt+Cmd+C`   |
+| Windows / Linux | `Ctrl+Alt+Shift+C` |
 
 You can override this in VS Code via **Preferences → Keyboard Shortcuts** — search for `Copy Selection Reference for Model`.
 
@@ -30,7 +30,7 @@ You can override this in VS Code via **Preferences → Keyboard Shortcuts** — 
 ```bash
 npm install
 npm run package
-code --install-extension copy-path-selection-0.0.1.vsix
+code --install-extension copy-path-selection-0.0.2.vsix
 ```
 
 ## License

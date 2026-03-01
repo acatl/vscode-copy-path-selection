@@ -1,35 +1,62 @@
 {
   "name": "copy-path-selection",
   "displayName": "Copy Path and Selection",
-  "description": "Copy a file path + selection range to clipboard in a format a Model can understand.",
-  "version": "0.0.1",
+  "description": "Copies the file path and selection range to the clipboard in a compact format — ideal for referencing code in AI assistants.",
+  "version": "0.0.2",
   "publisher": "acatl",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "keywords": [
+    "clipboard",
+    "path",
+    "selection",
+    "AI",
+    "reference",
+    "copy",
+    "copilot"
+  ],
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "copy-path-selection.copySelection",
-        "title": "Copy Selection Reference for Model"
+        "title": "Copy Selection Reference for Model",
+        "category": "Copy Path"
       }
     ],
     "keybindings": [
       {
         "command": "copy-path-selection.copySelection",
-        "key": "ctrl+alt+cmd+c",
+        "key": "ctrl+alt+shift+c",
         "mac": "ctrl+alt+cmd+c",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "copy-path-selection.copySelection",
+          "when": "editorTextFocus",
+          "group": "9_cutcopypaste"
+        }
+      ]
+    }
   },
   "scripts": {
-    "package": "vsce package"
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "repository": {
     "type": "git",
