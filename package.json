@@ -1,0 +1,37 @@
+{
+  "name": "copy-path-selection",
+  "displayName": "Copy Path and Selection",
+  "description": "Copy a file path + selection range to clipboard in a format a Model can understand.",
+  "version": "0.0.1",
+  "publisher": "acatl",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copy-path-selection.copySelection",
+        "title": "Copy Selection Reference for Model"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "copy-path-selection.copySelection",
+        "key": "ctrl+alt+cmd+c",
+        "mac": "ctrl+alt+cmd+c",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.0.0"
+  }
+}
